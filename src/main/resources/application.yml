@@ -1,0 +1,13 @@
+quarkus:
+  datasource:
+    db-kind: postgresql
+    username: ali
+    password: password
+    jdbc:
+      url: jdbc:postgresql://localhost:2000/postgres
+  # empêcher que les modifications des entités entraînent des changements dans la structure de la bdd
+  hibernate-orm:
+    datasource:
+      generation: create-drop
+    log:
+      sql: true
